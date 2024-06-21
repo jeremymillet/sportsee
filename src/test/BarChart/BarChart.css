@@ -1,0 +1,35 @@
+.bar-chart-componant{
+    width: 100%;
+    margin-top: 75px;
+    padding: 32px 24px;
+}
+.legend-container{
+    display: flex;
+    justify-content: space-between;
+}
+.legend{
+    display: flex;
+}
+.legend-poids,.legend-kcal{
+    display: flex;
+    align-items: center;
+    color: #74798C;
+    font-size: 14px;
+    font-weight: 500;
+}
+.legend-poids{
+    margin-right: 32px;
+}
+
+.legend-poids div,.legend-kcal div{
+    width: 8px;
+    height: 8px;
+    border-radius: 20px;
+    margin-right: 7px;
+}
+.legend-poids div{
+    background-color:#282D30 ;
+}
+.legend-kcal div {
+    background-color: #E60000;
+}

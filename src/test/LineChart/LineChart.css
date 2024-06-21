@@ -1,0 +1,16 @@
+.line-chart-container{
+    background-color: #FF0000;
+    border-radius: 5px;
+    width: 268px;
+    height: 268px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.line-chart-container h3{
+    height: 60px;
+    color: #FFF;
+    font-size: 15px;
+    font-weight: 500;
+    opacity: 0.50;
+}

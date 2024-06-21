@@ -1,0 +1,14 @@
+.radar-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 268px;
+    height: 268px;
+    background-color: #282D30;
+    border-radius: 5px;
+}
+.radar-text{
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 500;
+}
