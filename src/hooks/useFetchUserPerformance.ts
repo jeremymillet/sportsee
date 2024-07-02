@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { fetchUserPerformanceData } from "../services";
 import { UserPerformanceApi } from "../types/userPerformanceTypes";
+import { getUrlId } from "../helpers";
 
 
 
@@ -14,7 +15,8 @@ function useFetchUserPerformance() {
         setIsloading(true);
         setError(undefined);
         try {
-            const response = await fetchUserPerformanceData(12);
+            const urlId = getUrlId()
+            const response = await fetchUserPerformanceData(urlId);
             setUserPerformance(response);
            
         } catch (err:any) {

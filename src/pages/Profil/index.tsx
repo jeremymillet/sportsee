@@ -17,7 +17,6 @@ function Profil() {
 
     useEffect(() => {
         fetchUserData()
-       
     }, []);
     if (isLoadingUserData) {
         return <p>Chargement</p>

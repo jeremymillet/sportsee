@@ -1,7 +1,11 @@
 .bar-chart-componant{
+    display: flex;
+    height: 320px;
+    flex-direction: column;
     width: 100%;
     margin-top: 75px;
-    padding: 32px 24px;
+    padding: 32px 20px;
+    background-color:#FBFBFB;
 }
 .legend-container{
     display: flex;
@@ -32,4 +36,34 @@
 }
 .legend-kcal div {
     background-color: #E60000;
+}
+
+.custom-tooltip-bar{
+    display: flex;
+    flex-direction: column;
+}
+.custom-tooltip-bar span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    font-size: 12px;
+    padding: 10px;
+    background-color: #E60000;
+    color: #ffffff;
+}
+
+
+@media (max-height: 920px) {
+    .bar-chart-componant{
+        margin-top: 40px;
+    }
+
+}
+@media (max-width: 1225px) {
+    .bar-chart-componant{
+        margin-top: 10px;
+        height: 250px;
+        padding: 20px 20px;
+    }
 }

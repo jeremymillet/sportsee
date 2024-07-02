@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { fetchUserMainData } from "../services";
 import { UserMainDataApi } from "../types/userMainDataTypes";
+import { getUrlId } from "../helpers";
 
 
 
@@ -13,7 +14,8 @@ function useFetchUserData() {
         setIsloading(true);
         setError(undefined);
         try {
-            const response = await fetchUserMainData(12);
+            const urlId = getUrlId()
+            const response = await fetchUserMainData(urlId);
             setUserData(response);
             
         } catch (err:any) {

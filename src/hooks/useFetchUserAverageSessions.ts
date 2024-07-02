@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { fetchUserAverageSessionsData } from "../services";
 import { UserAverageSessionsApi } from "../types/userAverageSessionsTypes";
+import { getUrlId } from "../helpers";
 
 
 
@@ -14,7 +15,8 @@ function useFetchUserAverageSessions() {
         setIsloading(true);
         setError(undefined);
         try {
-            const response = await fetchUserAverageSessionsData(12);
+            const urlId = getUrlId()
+            const response = await fetchUserAverageSessionsData(urlId);
             setUserAverageSessionsData(response);
             
         } catch (err:any) {

@@ -1,7 +1,7 @@
 .line-chart-container{
     background-color: #FF0000;
     border-radius: 5px;
-    width: 268px;
+    width: 258px;
     height: 268px;
     display: flex;
     flex-direction: column;
@@ -12,5 +12,31 @@
     color: #FFF;
     font-size: 15px;
     font-weight: 500;
+    margin-left: 60px;
+    text-align: left;
     opacity: 0.50;
+}
+
+.active-dot{
+    fill: #FFF;
+    stroke: rgba(255, 255, 255, 0.40);
+    stroke-width: 15px;
+
+}
+.custom-tooltip {
+    background-color: #fff;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+@media (max-width: 1225px) {
+    .line-chart-container {
+        width: 220px;
+        height: 220px;
+    }
+    .line-chart-container h3 {
+        margin-left: 40px;
+    }
+
 }

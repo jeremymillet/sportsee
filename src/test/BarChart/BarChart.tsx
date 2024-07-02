@@ -10,6 +10,18 @@ type BarChartComponantProps = {
 }
 
 const BarCharte: React.FC<BarChartComponantProps> = ({ data }) => {
+  const CustomTooltip = ({ active, payload }: any) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="custom-tooltip-bar">
+          <span>{`${payload[0].value} kg`}</span>
+          <span>{`${payload[1].value} Kcal`}</span>
+        </div>
+      );
+    }
+
+    return null;
+  };
   return (
     <div className='bar-chart-componant'>
       <div className='legend-container'>
@@ -25,7 +37,7 @@ const BarCharte: React.FC<BarChartComponantProps> = ({ data }) => {
           </div>
         </div>
       </div>
-      <ResponsiveContainer width="100%" height={320}>
+      <ResponsiveContainer width="100%" height="100%">
       <BarChart
         data={data}
       >
@@ -40,19 +52,19 @@ const BarCharte: React.FC<BarChartComponantProps> = ({ data }) => {
           tickLine={false}
           tick={{ fill: '#DEDEDE' }}
         />
-        <Tooltip />
+        <Tooltip content={<CustomTooltip/>} />
         <Bar
           yAxisId="right"
           dataKey="kilogram"
           fill="#000"
-          barSize={15}
+          barSize={12}
           radius={[10, 10, 0, 0]}
         />
         <Bar
           yAxisId="left"
           dataKey="calories"
           fill="#E60000"
-          barSize={15}
+          barSize={12}
           radius={[10, 10, 0, 0]}
         />
       </BarChart>

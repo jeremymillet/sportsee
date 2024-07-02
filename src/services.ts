@@ -48,12 +48,12 @@ type UserPerformance ={
 // Fetching user main data
 export async function fetchUserMainData(userId: number): Promise<UserMainData | null> {
     try {
-        const response = await fetch(`http://localhost:3000/USER_MAIN_DATA/${userId}`);
+        const response = await fetch(`http://localhost:3000/user/${userId}`);
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
-        const data: UserMainData = await response.json();
-        return data;
+        const data = await response.json();
+        return data.data|| null;
     } catch (error:any) {
         console.error('Error fetching user main data:', error);
         return error;
@@ -62,14 +62,13 @@ export async function fetchUserMainData(userId: number): Promise<UserMainData | 
 
 export async function fetchUserActivityData(userId: number): Promise<UserActivity | null> {
    try {
-        const response = await fetch(`http://localhost:3000/USER_ACTIVITY/?userId=${userId}`);
+        const response = await fetch(`http://localhost:3000/user/${userId}/activity`);
         if (!response.ok) {
             throw new Error(`Erreur HTTP! Statut: ${response.status}`);
         }
-        const data: UserActivity[] = await response.json();
-        const userActivity = data.find(activity => activity.UserId === userId);
+        const data = await response.json();
 
-        return userActivity || null;
+        return data.data || null;
     } catch (error:any) {
         console.error('Erreur lors de la récupération des activités de l\'utilisateur:', error);
         return error;
@@ -79,13 +78,13 @@ export async function fetchUserActivityData(userId: number): Promise<UserActivit
 // Fetching user average sessions
 export async function fetchUserAverageSessionsData(userId: number): Promise<UserAverageSessions | null> {
     try {
-        const response = await fetch(`http://localhost:3000/USER_AVERAGE_SESSIONS/?userId=${userId}`);
+        const response = await fetch(`http://localhost:3000/user/${userId}/average-sessions`);
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
-        const data: UserAverageSessions[] = await response.json();
-        const userAverageSessions = data.find(AverageSessions => AverageSessions.userId === userId);
-        return userAverageSessions || null;
+        const data = await response.json();
+        
+        return data.data || null;
     } catch (error:any) {
         console.error('Error fetching user average sessions:', error);
         return error;
@@ -95,14 +94,12 @@ export async function fetchUserAverageSessionsData(userId: number): Promise<User
 // Fetching user performance
 export async function fetchUserPerformanceData(userId: number): Promise<UserPerformance | null> {
     try {
-        const response = await fetch(`http://localhost:3000/USER_PERFORMANCE/?userId=${userId}`);
+        const response = await fetch(`http://localhost:3000/user/${userId}/performance`);
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
-
-        const data: UserPerformance[] = await response.json();
-        const userPerformance = data.find(performance => performance.userId === userId);
-        return userPerformance || null;
+        const data = await response.json();
+        return data.data || null;
     } catch (error:any) {
         console.error('Error fetching user performance:', error);
         return error;

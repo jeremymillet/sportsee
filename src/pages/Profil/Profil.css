@@ -116,13 +116,18 @@ textarea:not([rows]) {
     width: 75%;
 }
 .stats-container{
+    margin-left: 20px;
     width: 25%;
     max-width:258px;
     margin-top: 75px;
 }
 .square-graph-container{
+    margin-top: 24px;
     display:flex;
+    justify-content: space-between;
+    height:263px;
 }
+
 h1{
     text-align: start;
     font-size: 48px;
@@ -137,21 +142,65 @@ h2{
     text-align: start;
     font-weight: 400;
 }
+@media (max-height: 920px) {
+    .stats-container {
+        margin-top: 40px;
+    }
 
-@media (max-height: 860px) {
-    .card {
-        width: 258px;
-        height: 100px;
-        margin-bottom: 30px;
-    }
-    .dashboard-container {
-        padding: 0px 0px;
-        padding: 40px 80px 0px 80px;
-    }
 }
-@media (max-width: 1060px) {
+@media (max-width: 1300px) {
     .dashboard-container {
-        padding: 0px 0px;
-        padding: 40px 40px 0px 40px;
+        padding: 40px 0px 0px 40px;
     }
+    
+}
+@media (max-width: 1225px) {
+    .dashboard-container {
+        padding: 20px 40px 0px 40px;
+        display: flex;
+    }
+    .name-container {
+        width: 100%;
+    }
+    .graph-stats-container{
+        display:flex;
+        flex-direction: column;
+    }
+    .graph-container {
+        order: 2;
+        width: 100%;
+    }
+    .square-graph-container {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        height: 220px;
+    }
+    .stats-container {
+        order: 1;
+        margin-left: 0px;
+        width: 100%;
+        max-width: none;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+
+    }
+    h1 {
+        text-align: start;
+        font-size: 34px;
+        font-weight: 500;
+        margin: 0px;
+    }
+
+    h1 span {
+        color: red;
+    }
+
+    h2 {
+        font-size: 12px;
+        text-align: start;
+        font-weight: 400;
+    }
+
 }

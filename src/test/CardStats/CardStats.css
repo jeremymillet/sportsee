@@ -46,3 +46,37 @@
     width: 20px;
     height: 20px;
 }
+
+@media (max-width: 1225px) {
+    .card {
+        width: 22%;
+        height: 90px;
+        background-color: #FBFBFB;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0px;
+        border-radius: 5px;
+    }
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        margin-right: 20px;
+        margin-left: 15px;
+        border-radius: 6px;
+    }
+    .text-container p {
+        color: #74798C;
+        font-size: 12px;
+        font-weight: 500;
+        text-align: start;
+    }
+
+    .text-container .text-number {
+        font-size: 16px;
+        font-weight: 700;
+        color: #282D30;
+    }
+}

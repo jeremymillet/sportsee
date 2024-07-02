@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { fetchUserActivityData } from "../services";
 import { UserActivityApi } from "../types/userActivityTypes";
+import { getUrlId } from "../helpers";
 
 
 
@@ -8,13 +9,17 @@ import { UserActivityApi } from "../types/userActivityTypes";
 function useFetchUserActivity() {
     const [isloaging, setIsloading] = useState<boolean>(false);
     const [error,setError] = useState<Error>();
-    const [userActivity, setUserActivity] = useState<UserActivityApi| null>(null);
+    const [userActivity, setUserActivity] = useState<UserActivityApi | null>(null);
+    const urlparams = new URLSearchParams(window.location.search);
+    const urlId = urlparams.get("id");
+    console.log(urlId);
 
     async function fetchUserActivity() {
         setIsloading(true);
         setError(undefined);
         try {
-            const response = await fetchUserActivityData(12);
+            const urlId = getUrlId()
+            const response = await fetchUserActivityData(urlId);
             setUserActivity(response);
             
         } catch (err:any) {

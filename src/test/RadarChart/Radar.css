@@ -1,8 +1,7 @@
 .radar-container{
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 268px;
+    width: 258px;
     height: 268px;
     background-color: #282D30;
     border-radius: 5px;
@@ -11,4 +10,15 @@
     color: #FFF;
     font-size: 12px;
     font-weight: 500;
+}
+.recharts-polar-grid-angle line {
+    display: none;
+}
+
+@media (max-width: 1225px) {
+    .radar-container {
+        width: 220px;
+        height: 220px;
+    }
+
 }

@@ -29,9 +29,14 @@ const ScoreChartComponents = () => {
   if (errorUserData) {
       return <p>Erreur chargement</p>
   }
+  const score = data.todayScore; 
+  const dataChart = [
+  { value: score },
+  { value: 1 - score },
   
+  ];
   return (
-    <ScoreChart data={data}/>
+    <ScoreChart data={dataChart} score={score} />
   );
 };
 
