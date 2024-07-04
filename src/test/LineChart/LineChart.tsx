@@ -1,4 +1,5 @@
 import './LineChart.css'
+import PropTypes from 'prop-types';
 import {
   LineChart,
   Line,
@@ -53,5 +54,18 @@ const LineComponent: React.FC<lineChartComponentProps> = ({ data }) => {
     </div>
   );
 };
+
+LineComponent.propTypes = {
+  data: PropTypes.shape({
+    userId: PropTypes.number.isRequired,
+    sessions: PropTypes.arrayOf(
+      PropTypes.shape({
+        day: PropTypes.string.isRequired,
+        sessionLength: PropTypes.number.isRequired,
+      }).isRequired,
+    ).isRequired
+  }).isRequired
+}
+
 
 export default LineComponent;

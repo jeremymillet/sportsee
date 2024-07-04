@@ -10,9 +10,8 @@ function useFetchUserActivity() {
     const [isloaging, setIsloading] = useState<boolean>(false);
     const [error,setError] = useState<Error>();
     const [userActivity, setUserActivity] = useState<UserActivityApi | null>(null);
-    const urlparams = new URLSearchParams(window.location.search);
-    const urlId = urlparams.get("id");
-    console.log(urlId);
+    
+
 
     async function fetchUserActivity() {
         setIsloading(true);

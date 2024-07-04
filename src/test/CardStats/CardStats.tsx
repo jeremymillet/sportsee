@@ -1,4 +1,5 @@
 import './CardStats.css'
+import PropTypes from 'prop-types';
 
 type CardStatsProps = {
     logo: string;
@@ -22,5 +23,11 @@ const CardStats: React.FC<CardStatsProps> = ({ logo, classColor, data,type }) =>
     )
 }
 
+CardStats.propTypes = {
+    logo: PropTypes.string.isRequired,
+    classColor: PropTypes.string.isRequired,
+    data: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+}
 
 export default CardStats

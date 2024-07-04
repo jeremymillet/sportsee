@@ -1,4 +1,6 @@
-import { ResponsiveContainer,BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
+import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
+import React from 'react';
+import PropTypes from 'prop-types';
 import './BarChart.css'
 
 type BarChartComponantProps = {
@@ -72,4 +74,14 @@ const BarCharte: React.FC<BarChartComponantProps> = ({ data }) => {
       </div>
   );
 }
+
+BarCharte.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      day: PropTypes.string.isRequired,
+      kilogram: PropTypes.number.isRequired,
+      calories: PropTypes.number.isRequired,
+    }).isRequired
+  ).isRequired,
+};
 export default BarCharte

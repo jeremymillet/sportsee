@@ -1,6 +1,6 @@
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 import './ScoreChart.css'
-
+import PropTypes from 'prop-types';
 
 const ScoreChart = ({ data,score }) => {
   const COLORS = ['#ff0000', '#e0e0e0'];
@@ -31,6 +31,15 @@ const ScoreChart = ({ data,score }) => {
     </div>
     
   );
+};
+
+ScoreChart.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.number.isRequired,
+    }).isRequired
+  ).isRequired,
+  score: PropTypes.number.isRequired
 };
 
 export default ScoreChart;

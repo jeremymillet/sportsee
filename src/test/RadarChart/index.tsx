@@ -1,6 +1,7 @@
 
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer, PolarRadiusAxis} from 'recharts';
 import './Radar.css'
+import PropTypes from 'prop-types';
 
 type RadarComponentProps = {
   performanceData: {
@@ -26,5 +27,12 @@ const RadarComponent: React.FC<RadarComponentProps> = ({ performanceData }) => {
     </div>
   );
 }
-
+RadarComponent.propTypes = {
+  performanceData: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.number.isRequired,
+      subject: PropTypes.string.isRequired,
+    }).isRequired
+  ),
+};
 export default RadarComponent;
