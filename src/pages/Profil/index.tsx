@@ -1,6 +1,6 @@
 import Header from '../../components/Header/index';
 import { useEffect } from 'react';
-import PropTypes from 'prop-types';
+
 import Sidebar from '../../components/SideBar/index';
 import CardStatsComponent from '../../components/CardStatsComponents/index';
 import './Profil.css';
@@ -61,16 +61,5 @@ function Profil() {
         </div>
     );
 }
-
-Profil.propTypes = {
-    fetchUserData: PropTypes.func.isRequired,
-    userData: PropTypes.shape({
-        userInfos: PropTypes.shape({
-            firstName: PropTypes.string.isRequired,
-        }).isRequired,
-    }),
-    isLoadingUserData: PropTypes.bool.isRequired,
-    errorUserData: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-};
 
 export default Profil;

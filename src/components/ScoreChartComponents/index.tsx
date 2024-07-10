@@ -23,7 +23,7 @@ const ScoreChartComponents = () => {
     }
   }, [userData])
   
-  if (isLoadingUserData) {
+  if (isLoadingUserData|| (Object.keys(data).length === 0 &&!errorUserData)) {
       return <p>Chargement</p>
   }
   if (errorUserData) {

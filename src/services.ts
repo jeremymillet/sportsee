@@ -1,52 +1,11 @@
-type UserInfo = {
-    firstName: string;
-    lastName: string;
-    age: number;
-};
+import { UserActivityApi } from "./types/userActivityTypes";
+import { UserAverageSessionsApi } from "./types/userAverageSessionsTypes";
+import { UserMainDataApi } from "./types/userMainDataTypes";
+import { UserPerformanceApi } from "./types/userPerformanceTypes";
 
-type UserMainData = {
-    id: number;
-    userInfos: UserInfo;
-    todayScore?: number;
-    score?: number;
-    keyData: {
-        calorieCount: number;
-        proteinCount: number;
-        carbohydrateCount: number;
-        lipidCount: number;
-    };
-};
-
-type UserActivity = {
-    UserId: number;
-    sessions: {
-        day: string;
-        kilogram: number;
-        calories: number;
-    }[];
-};
-
-type UserAverageSessions ={
-    userId: number;
-    sessions: {
-        day: number;
-        sessionLength: number;
-    }[];
-}
-
-type UserPerformance ={
-    userId: number;
-    kind: {
-        [key: number]: string;
-    };
-    data: {
-        value: number;
-        kind: number;
-    }[];
-}
 
 // Fetching user main data
-export async function fetchUserMainData(userId: number): Promise<UserMainData | null> {
+export async function fetchUserMainData(userId: number): Promise<UserMainDataApi | null> {
     try {
         const response = await fetch(`http://localhost:3000/user/${userId}`);
         if (!response.ok) {
@@ -56,11 +15,11 @@ export async function fetchUserMainData(userId: number): Promise<UserMainData | 
         return data.data|| null;
     } catch (error:any) {
         console.error('Error fetching user main data:', error);
-        return error;
+        throw error;
     }
 }
 
-export async function fetchUserActivityData(userId: number): Promise<UserActivity | null> {
+export async function fetchUserActivityData(userId: number): Promise<UserActivityApi | null> {
    try {
         const response = await fetch(`http://localhost:3000/user/${userId}/activity`);
         if (!response.ok) {
@@ -71,12 +30,12 @@ export async function fetchUserActivityData(userId: number): Promise<UserActivit
         return data.data || null;
     } catch (error:any) {
         console.error('Erreur lors de la récupération des activités de l\'utilisateur:', error);
-        return error;
+        throw error;
     }
 }
 
 // Fetching user average sessions
-export async function fetchUserAverageSessionsData(userId: number): Promise<UserAverageSessions | null> {
+export async function fetchUserAverageSessionsData(userId: number): Promise<UserAverageSessionsApi | null> {
     try {
         const response = await fetch(`http://localhost:3000/user/${userId}/average-sessions`);
         if (!response.ok) {
@@ -87,12 +46,12 @@ export async function fetchUserAverageSessionsData(userId: number): Promise<User
         return data.data || null;
     } catch (error:any) {
         console.error('Error fetching user average sessions:', error);
-        return error;
+        throw error;
     }
 }
 
 // Fetching user performance
-export async function fetchUserPerformanceData(userId: number): Promise<UserPerformance | null> {
+export async function fetchUserPerformanceData(userId: number): Promise<UserPerformanceApi | null> {
     try {
         const response = await fetch(`http://localhost:3000/user/${userId}/performance`);
         if (!response.ok) {
@@ -102,6 +61,6 @@ export async function fetchUserPerformanceData(userId: number): Promise<UserPerf
         return data.data || null;
     } catch (error:any) {
         console.error('Error fetching user performance:', error);
-        return error;
+        throw error;
     }
 }

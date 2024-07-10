@@ -18,7 +18,7 @@ function LineChartComponent() {
         setData(userDataFormat)
     }
   }, [userAverageSessionsData])
-    if ( isLoadingUserAverageSessions) {
+    if ( isLoadingUserAverageSessions|| (Object.keys(data).length === 0 &&!errorUserAverageSessions)) {
         return <p>Chargement</p>
     }
     if (errorUserAverageSessions) {

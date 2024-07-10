@@ -11,20 +11,20 @@ function BarChartComponent() {
   useEffect(() => {
         fetchUserActivity()
   }, []);
+
   useEffect(() => {
     if (userActivity !== null) {
       const test = new UserActivityClass()
       const userDataFormat = test.FormatData(userActivity);
       setData(userDataFormat)
     }
-  }, [userActivity])
-    if ( isLoadingUserActivity) {
-        return <p>Chargement</p>
+  }, [userActivity,errorUserActivity])
+    if ( isLoadingUserActivity || (Object.keys(data).length === 0 &&!errorUserActivity) ) {
+      return <p>Chargement</p>
     }
-    if (errorUserActivity ) {
-        return <p>Erreur chargement</p>
-    }
-  
+    if (errorUserActivity) {
+      return <p>Erreur chargement</p>
+  }
   return (
     <BarCharte data={data.sessions}/>
   )

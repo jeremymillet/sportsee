@@ -4,15 +4,11 @@ import { UserActivityApi } from "../types/userActivityTypes";
 import { getUrlId } from "../helpers";
 
 
-
-
 function useFetchUserActivity() {
     const [isloaging, setIsloading] = useState<boolean>(false);
     const [error,setError] = useState<Error>();
     const [userActivity, setUserActivity] = useState<UserActivityApi | null>(null);
     
-
-
     async function fetchUserActivity() {
         setIsloading(true);
         setError(undefined);
