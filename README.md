@@ -1,30 +1,52 @@
-# React + TypeScript + Vite
+# Sportsee
+## Description
+Sportsee est une application web construite avec Vite, React et TypeScript.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Prérequis
+### Assurez-vous d'avoir les éléments suivants installés sur votre machine :
 
-Currently, two official plugins are available:
+- Node.js (version 14 ou supérieure)
+- npm ou yarn
+  
+## Installation
+### Clonez ce dépôt sur votre machine locale :
+`git clone https://github.com/jeremymillet/sportsee.git`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installez les dépendances :
 
-## Expanding the ESLint configuration
+### Avec npm :
+`npm install`
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Avec yarn :
+`yarn install`
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+## Scripts
+
+### Développement
+
+### Pour lancer le serveur de développement :
+### Avec npm :
+`npm run dev`
+### Avec yarn :
+`yarn dev`
+
+L'application sera accessible à l'adresse http://localhost:5173/.
+
+### Construction
+### Pour construire l'application pour la production :
+### Avec npm :
+`npm run build`
+### Avec yarn :
+`yarn build`
+
+Les fichiers de construction seront disponibles dans le dossier dist.
+
+### Prévisualisation de la construction
+### Pour prévisualiser l'application construite :
+### Avec npm :
+`npm run serve`
+### Avec yarn :
+`yarn serve`
