@@ -8,7 +8,9 @@ function useFetchUserActivity() {
     const [isloaging, setIsloading] = useState<boolean>(false);
     const [error,setError] = useState<Error>();
     const [userActivity, setUserActivity] = useState<UserActivityApi | null>(null);
-    
+    /**
+     * Fonction asynchrone pour récupérer l'activité utilisateur.
+     */
     async function fetchUserActivity() {
         setIsloading(true);
         setError(undefined);

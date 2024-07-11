@@ -12,7 +12,7 @@ const ScoreChartComponents = () => {
   const { fetchUserData, userData, isloaging: isLoadingUserData, error: errorUserData } = useFetchUserData();
   const [data, setData] = useState<UserMainDataChart>({}as UserMainDataChart);
   useEffect(() => {
-        fetchUserData()
+    fetchUserData()
   }, []);
 
   useEffect(() => {

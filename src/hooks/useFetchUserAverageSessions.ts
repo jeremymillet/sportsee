@@ -10,7 +10,9 @@ function useFetchUserAverageSessions() {
     const [isloaging, setIsloading] = useState<boolean>(false);
     const [error,setError] = useState<Error>();
     const [userAverageSessionsData, setUserAverageSessionsData] = useState<UserAverageSessionsApi| null>(null);
-
+    /**
+     * Fonction asynchrone pour récupérer les sessions moyennes de l'utilisateur.
+     */
     async function fetchUserAverageSessions() {
         setIsloading(true);
         setError(undefined);

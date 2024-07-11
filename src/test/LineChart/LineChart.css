@@ -1,4 +1,5 @@
 .line-chart-container{
+    position: relative;
     background-color: #FF0000;
     border-radius: 5px;
     width: 258px;
@@ -8,11 +9,13 @@
     justify-content: flex-end;
 }
 .line-chart-container h3{
+    position: absolute;
+    top: 20px;
     height: 60px;
     color: #FFF;
     font-size: 15px;
     font-weight: 500;
-    margin-left: 60px;
+    margin-left: 20px;
     text-align: left;
     opacity: 0.50;
 }
@@ -36,7 +39,8 @@
         height: 220px;
     }
     .line-chart-container h3 {
-        margin-left: 40px;
+        top: 10px;
+        margin-left: 20px;
     }
 
 }

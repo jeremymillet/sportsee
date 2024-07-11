@@ -21,8 +21,6 @@ Sportsee est une application web construite avec Vite, React et TypeScript.
 `yarn install`
 
 
-
-
 ## Scripts
 
 ### Développement

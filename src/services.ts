@@ -4,7 +4,12 @@ import { UserMainDataApi } from "./types/userMainDataTypes";
 import { UserPerformanceApi } from "./types/userPerformanceTypes";
 
 
-// Fetching user main data
+
+/**
+ * Fetching user main data
+ * @param {number}userId  id of the user
+ * @returns {object} with user main data
+ */
 export async function fetchUserMainData(userId: number): Promise<UserMainDataApi | null> {
     try {
         const response = await fetch(`http://localhost:3000/user/${userId}`);
@@ -19,6 +24,11 @@ export async function fetchUserMainData(userId: number): Promise<UserMainDataApi
     }
 }
 
+/**
+ * Fetching user activity data
+ * @param {number}userId  id of the user
+ * @returns {object} with user activity data
+ */
 export async function fetchUserActivityData(userId: number): Promise<UserActivityApi | null> {
    try {
         const response = await fetch(`http://localhost:3000/user/${userId}/activity`);
@@ -34,7 +44,11 @@ export async function fetchUserActivityData(userId: number): Promise<UserActivit
     }
 }
 
-// Fetching user average sessions
+/**
+ * Fetching user average sessions
+ * @param {number}userId  id of the user
+ * @returns {object} with user average data
+ */
 export async function fetchUserAverageSessionsData(userId: number): Promise<UserAverageSessionsApi | null> {
     try {
         const response = await fetch(`http://localhost:3000/user/${userId}/average-sessions`);
@@ -50,7 +64,12 @@ export async function fetchUserAverageSessionsData(userId: number): Promise<User
     }
 }
 
-// Fetching user performance
+
+/**
+ * Fetching user performance
+ * @param {number}userId  id of the user
+ * @returns {object} with user performance data
+ */
 export async function fetchUserPerformanceData(userId: number): Promise<UserPerformanceApi | null> {
     try {
         const response = await fetch(`http://localhost:3000/user/${userId}/performance`);

@@ -20,8 +20,7 @@ export type UserMainDataApi = {
 export type UserMainDataChart = {
     userId: number;
     userInfos: UserInfo;
-    todayScore?: number;
-    score?: number;
+    todayScore: number;
     keyData: {
         calorieCount: number;
         proteinCount: number;

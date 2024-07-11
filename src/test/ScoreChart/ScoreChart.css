@@ -12,14 +12,14 @@
     width: 100%;
     display: flex;
     align-items: center;
-    margin: 24px 0px 0px 30px;
+    margin: 10px 0px 0px 30px;
     color: #20253A;
     font-size: 15px;
     font-weight: 500;
 }
 .info-score{
     position: absolute;
-    bottom: 85px;
+    bottom: 90px;
 }
 .info-score p{
     color: #74798C;
