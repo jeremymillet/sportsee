@@ -1,7 +1,7 @@
 
 import useFetchUserPerformance from "../../hooks/useFetchUserPerformance";
 import { useEffect, useState } from "react";
-import RadarComponent from "../../test/RadarChart";
+import RadarComponent from "../../shared/RadarChart";
 import { RadarChartData} from "../../types/userPerformanceTypes";
 import { UserPerformanceClass } from "../../class/userPerformanceClass";
 

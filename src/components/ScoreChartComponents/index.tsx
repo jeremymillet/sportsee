@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import useFetchUserData from "../../hooks/useFetchUserData";
-import ScoreChart from "../../test/ScoreChart/ScoreChart";
+import ScoreChart from "../../shared/ScoreChart/ScoreChart";
 import { UserMainDataChart } from "../../types/userMainDataTypes";
 import { UserMainDataClass } from "../../class/userMainData";
 

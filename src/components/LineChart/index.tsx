@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import useFetchUserAverageSessions from "../../hooks/useFetchUserAverageSessions";
 import { UserAverageSessionsClass } from "../../class/userAverageSessionsClass";
 import { UserAverageSessionsChart } from "../../types/userAverageSessionsTypes";
-import LineComponent from "../../test/LineChart/LineChart";
+import LineComponent from "../../shared/LineChart/LineChart";
 
 function LineChartComponent() {
   const { fetchUserAverageSessions, userAverageSessionsData, isloaging: isLoadingUserAverageSessions, error: errorUserAverageSessions } = useFetchUserAverageSessions();

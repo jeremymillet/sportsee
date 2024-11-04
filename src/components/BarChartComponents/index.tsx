@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import useFetchUserActivity from "../../hooks/useFetchUserActivity";
-import BarCharte from "../../test/BarChart/BarChart"
+import BarCharte from "../../shared/BarChart/BarChart"
 import { UserActivityChart } from "../../types/userActivityTypes";
 import { UserActivityClass } from "../../class/userActivity";
 

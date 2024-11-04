@@ -1,4 +1,4 @@
-import CardStats from "../../test/CardStats/CardStats"
+import CardStats from "../../shared/CardStats/CardStats"
 import apple from '../../assets/apple.png';
 import cheeseburger from '../../assets/cheeseburger.png';
 import chicken from '../../assets/chicken.png';
