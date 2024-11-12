@@ -12,7 +12,7 @@ import { UserPerformanceApi } from "./types/userPerformanceTypes";
  */
 export async function fetchUserMainData(userId: number): Promise<UserMainDataApi | null> {
     try {
-        const response = await fetch(`http://localhost:3000/user/${userId}`);
+        const response = await fetch(`https://sportsee-api-t48q.onrender.com/user/${userId}`);
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -31,7 +31,7 @@ export async function fetchUserMainData(userId: number): Promise<UserMainDataApi
  */
 export async function fetchUserActivityData(userId: number): Promise<UserActivityApi | null> {
    try {
-        const response = await fetch(`http://localhost:3000/user/${userId}/activity`);
+        const response = await fetch(`https://sportsee-api-t48q.onrender.com/user/${userId}/activity`);
         if (!response.ok) {
             throw new Error(`Erreur HTTP! Statut: ${response.status}`);
         }
@@ -51,7 +51,7 @@ export async function fetchUserActivityData(userId: number): Promise<UserActivit
  */
 export async function fetchUserAverageSessionsData(userId: number): Promise<UserAverageSessionsApi | null> {
     try {
-        const response = await fetch(`http://localhost:3000/user/${userId}/average-sessions`);
+        const response = await fetch(`https://sportsee-api-t48q.onrender.com/user/${userId}/average-sessions`);
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -72,7 +72,7 @@ export async function fetchUserAverageSessionsData(userId: number): Promise<User
  */
 export async function fetchUserPerformanceData(userId: number): Promise<UserPerformanceApi | null> {
     try {
-        const response = await fetch(`http://localhost:3000/user/${userId}/performance`);
+        const response = await fetch(`https://sportsee-api-t48q.onrender.com/user/${userId}/performance`);
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
