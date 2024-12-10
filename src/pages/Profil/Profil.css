@@ -101,7 +101,7 @@ textarea:not([rows]) {
 .dashboard-container{
     display: flex;
     flex-direction: column;
-    padding: 50px 80px;
+    padding: 20px 80px;
     width: 100%;
 
 }
@@ -116,10 +116,12 @@ textarea:not([rows]) {
     width: 75%;
 }
 .stats-container{
+    display: flex;
+    flex-direction: column;
     margin-left: 20px;
     width: 25%;
     max-width:258px;
-    margin-top: 75px;
+    gap: 30px;
 }
 .square-graph-container{
     margin-top: 24px;
@@ -222,9 +224,9 @@ h2{
         transform: rotate(450deg);
     }
 }
-@media (max-height: 920px) {
-    .stats-container {
-        margin-top: 40px;
+@media (min-height: 1000px) {
+    .stats-container{
+        margin-top: 70px;
     }
 
 }

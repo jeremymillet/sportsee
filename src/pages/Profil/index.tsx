@@ -49,7 +49,7 @@ function Profil() {
                         </div>
                         <div className='user-card'>
                             <a href="/?id=18">
-                                <p>utilisateur 18</p>
+                                <p>utilisateur 18 </p>
                             </a>
                         </div>
                     </div>
