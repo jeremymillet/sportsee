@@ -52,7 +52,6 @@ const BarCharte: React.FC<BarChartComponantProps> = ({ data }) => {
           stroke="#DEDEDE"
           axisLine={false}
           tickLine={false}
-          tick={{ fill: '#DEDEDE' }}
         />
         <Tooltip content={<CustomTooltip/>} />
         <Bar

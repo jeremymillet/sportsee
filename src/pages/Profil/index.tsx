@@ -20,15 +20,39 @@ function Profil() {
         fetchUserData()
     }, []);
     if (isLoadingUserData) {
-        return <p>Chargement</p>
+        return (
+            <div>
+                <Header />
+                <div className='main'>
+                    <Sidebar />
+                    <div className='container-loader'>
+                        <svg className="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                            <circle className="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+                        </svg>
+                        <p>chargement des données</p>
+                    </div>
+                </div>
+            </div>
+        )
     }
     if (errorUserData) {
         return(
         <div>
             <Header />
             <div className='main'>
-                <Sidebar />
-                <h1>UTILISATEUR INCONNUE</h1>
+                    <Sidebar />
+                    <div className='user-card-container'>
+                        <div className='user-card'>
+                            <a href="/?id=12">
+                                <p>utilisateur 12</p>
+                            </a>
+                        </div>
+                        <div className='user-card'>
+                            <a href="/?id=18">
+                                <p>utilisateur 18</p>
+                            </a>
+                        </div>
+                    </div>
             </div>
             </div>
         )

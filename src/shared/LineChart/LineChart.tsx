@@ -46,8 +46,8 @@ const LineComponent: React.FC<lineChartComponentProps> = ({ data }) => {
       <h3>Durée moyenne des <br />sessions</h3>
       <ResponsiveContainer width={"100%"} height={"100%"}>
         <LineChart data={data.sessions} >
-        <XAxis dataKey="day" stroke='#FFFFFF' tickLine={false} axisLine={false}/>
-        <Tooltip content={<CustomTooltip />} />
+          <XAxis dataKey="day" stroke='#FFFFFF' tickLine={false} axisLine={false}/>
+          <Tooltip content={<CustomTooltip />} />
           <Line type="monotone" activeDot={<CustomizedActiveDot/>} dataKey="sessionLength" stroke="#FFFFFF" strokeWidth={2} dot={false}/>
         </LineChart>
       </ResponsiveContainer>
